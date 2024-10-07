@@ -22,7 +22,7 @@ const Authentication = () => {
     >
       <View style={styles.mainContainer}>
         <View style={styles.textFieldContainer}>
-          <Text>Brukernavn</Text>
+          <Text>Epost</Text>
           <TextInput
             value={userName}
             onChangeText={setUserName}
@@ -45,8 +45,10 @@ const Authentication = () => {
             style={styles.primaryButton}
             onPress={() => {
               // createUserName(userName);
-              signIn(userName);
-              router.replace("/");
+              signIn(userName, password);
+              //Gamme kode for vanlig brukernavn nedenfor
+
+              /* router.replace("/"); */
             }}
           >
             <Text

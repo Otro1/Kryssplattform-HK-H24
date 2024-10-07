@@ -15,6 +15,7 @@ import SelectImageModal from "./SelectImageModal";
 
 import * as Location from "expo-location";
 import * as postApi from "@/api/postApi";
+/* import * as imageApi from "@/api/imageApi"; */
 
 type PostFormProps = {
   addNewPost: () => void;
@@ -33,7 +34,7 @@ export default function PostForm({ addNewPost, closeModal }: PostFormProps) {
     useState<Location.LocationGeocodedAddress | null>(null);
 
   const postCoordinatesData = useRef<Location.LocationObjectCoords | null>(
-    null
+    null,
   );
 
   useEffect(() => {
